@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notifications Dashboard</title>
+</head>
+<body>
+    <h1><strong>Notifications Dashboard</strong></h1>
+    <p>Notifications for member <strong>{{ member_id }}</strong> are as follows:</p>
+    <ul>
+        {% for notification in notifications %}
+            <li>{{ notification.message }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
