@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prime Numbers Computation Page</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1 { color: #000; }
+        label, input, button { font-size: 16px; margin: 5px; }
+        button { background-color: #007BFF; color: white; border: none; padding: 5px 10px; }
+    </style>
+</head>
+<body>
+    <h1>Prime Numbers Computation Page</h1>
+    <p>Finds the prime numbers in a specified range of numbers.</p>
+
+    <form method="POST">
+        {% csrf_token %}
+        <label for="start">Range starting number:</label>
+        <input type="number" name="start" id="start" required value="{{ start }}">
+        <br>
+        <label for="end">Range ending number:</label>
+        <input type="number" name="end" id="end" required value="{{ end }}">
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if primes %}
+        <p><strong>The primes in the range {{ start }} to {{ end }} are:</strong> {{ primes|join:" " }}</p>
+    {% elif start and end %}
+        <p><strong>No prime numbers found in the range {{ start }} to {{ end }}.</strong></p>
+    {% endif %}
+</body>
+</html>
