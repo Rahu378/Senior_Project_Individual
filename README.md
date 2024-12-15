@@ -33,7 +33,6 @@ The goal of this project is to gain hands-on experience with Django by building 
 ## **Technologies Used**
 - **Backend:** Django (Python framework)
 - **Frontend:** HTML, CSS, JavaScript
-- **Database:** SQLite (or configurable for PostgreSQL/MySQL)
 - **APIs:** RESTful endpoints for database communication (Project 2)
 
 ---
