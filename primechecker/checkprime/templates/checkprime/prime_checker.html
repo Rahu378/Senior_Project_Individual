@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number Checker</title>
+</head>
+<body>
+    <h1>Prime Number Checker</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="number">Enter a number:</label>
+        <input type="text" id="number" name="number" required>
+        <button type="submit">Check</button>
+    </form>
+    
+    {% if result is not None %}
+        <h2>Result:</h2>
+        {% if result == "Invalid input" %}
+            <p>Please enter a valid number.</p>
+        {% elif result %}
+            <p>{{ number }} is a prime number.</p>
+        {% else %}
+            <p>{{ number }} is not a prime number.</p>
+        {% endif %}
+    {% endif %}
+</body>
+</html>
