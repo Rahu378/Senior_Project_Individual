@@ -1,7 +1,3 @@
-Here’s an improved and polished version for the GitHub README:
-
----
-
 # **Senior_Project_Individual**
 
 This repository is part of the **Senior Project 1** course, focusing on building a series of applications using the Django framework. It includes all the code, documentation, and deliverables for the individual development phases.
@@ -72,7 +68,3 @@ The goal of this project is to gain hands-on experience with Django by building 
 
 ## **Contributions**
 Feel free to contribute to this repository by opening a pull request or submitting issues for enhancements and bug fixes.
-
----
-
-Let me know if you'd like any further refinements! 🚀
